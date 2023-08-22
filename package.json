@@ -16,8 +16,10 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
-  },
+  "start": "node server.js",      
+  "start:production": "NODE_ENV=production node server.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
