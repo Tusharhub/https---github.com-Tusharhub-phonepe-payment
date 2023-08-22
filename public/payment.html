@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+</head>
+
+<body>
+    <h2>Payment Status:</h2>
+    <p>Code: <span id="code"></span></p>
+    <p>Transaction ID: <span id="transactionId"></span></p>
+    <p>Provider Reference ID: <span id="providerReferenceId"></span></p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const transactionId = urlParams.get('transactionId');
+        const providerReferenceId = urlParams.get('providerReferenceId');
+
+        document.getElementById('code').textContent = code;
+        document.getElementById('transactionId').textContent = transactionId;
+        document.getElementById('providerReferenceId').textContent = providerReferenceId;
+    </script>
+
+</body>
+
+</html>
