@@ -30,9 +30,9 @@ app.post("/initiate-payment", async (req, res) => {
     merchantTransactionId: "MT" + Date.now(),
     merchantUserId: "MIT1",
     amount: amountInPaise, // Amount in paise
-    redirectUrl: "http://localhost:3000/payment-status",
+    redirectUrl: "/payment-status",
     redirectMode: "POST",
-    callbackUrl: "http://localhost:3000/payment-status", // Server-to-server callback URL
+    callbackUrl: "/payment-status", // Server-to-server callback URL
     mobileNumber: "9718903887",
     paymentInstrument: {
       type: "PAY_PAGE",
