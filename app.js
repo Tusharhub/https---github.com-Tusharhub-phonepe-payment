@@ -46,7 +46,7 @@ app.post("/initiate-payment", async (req, res) => {
 
   try {
     const response = await axios.post(
-      "https://api.phonepe.com/apis/hermes",
+      "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay",
       { request: payloadMain },
       {
         headers: {
